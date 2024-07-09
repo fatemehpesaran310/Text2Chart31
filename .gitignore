@@ -1,0 +1,6 @@
+checkpoint/
+cp-task1-lora16-epoch5-llama3/
+cp-task3-lora32-epoch5-llama3-fast/
+evaluation/
+output/
+wandb/
