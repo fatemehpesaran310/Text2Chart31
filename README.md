@@ -1,5 +1,5 @@
 # Text2Chart31
-Official PyTorch implementation of "Text2Chart31: Instruction Tuning for Chart Generation with Automatic Feedback"
+Official PyTorch implementation of **"Text2Chart31: Instruction Tuning for Chart Generation with Automatic Feedback"**
 
 ![image samples](asset/figure.png)
 
@@ -53,4 +53,9 @@ Unzip it under `checkpoint` folder and run inference code.
 - SFT model : Run `python generate3-llama3-bf16-sft.py`
 - RL model : Run `python generate3-llama3-bf16-rl.py`
 
+## Evaluation
+We will release the evaluation code soon!
+
+# Citation
+If you find this code useful, please don't forget to cite the paper! 🙂
 
