@@ -10,8 +10,8 @@ Official PyTorch implementation of **"Text2Chart31: Instruction Tuning for Chart
     - Training set: `./prepare-data/Text2Chart-31-train.json`
     - Test set: `./prepare-data/Text2Chart-31-test.json`.
 - Dataset file including the figures: 
-    - Training set: [download](https://drive.google.com/file/d/11otHdVt7eJqAJ7RJl71G6eFBsKHNYEAM/view?usp=sharing)
-    - Test set: [download](https://drive.google.com/file/d/1ckNEhhWA-eGPiGl-j7Mc_5UldsNNtOZX/view?usp=sharing)
+    - Training set: [download](https://drive.google.com/file/d/1RpczOjGgwEhS1ufsnf8F7BNeDxTyhHzO/view?usp=sharing)
+    - Test set: [download](https://drive.google.com/file/d/1tZZc-xg44Lo8IcHHxIv9yIhE3WmtX0qZ/view?usp=sharing)
 
 
 ## LoRA checkpoints
@@ -20,13 +20,13 @@ Unzip it under `checkpoint` folder and run inference code.
 
 | Task  | Model | Checkpoints |
 | :------ | :------ | :------: |
-| Task 1 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1DfG4kHO1N4QeG5SMVlVqMpqFQBNr3qhr/view?usp=sharing) |
-| Task 2 | Llama 3 Instruct | TBA |
-| Task 3 | Llama 3 Instruct | [download](https://drive.google.com/file/d/14Yyju22AXbQ_lakOkzt_eMkv7YN2iKyc/view?usp=sharing) |
+| Task 1 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1erAnQZM0mx2nJCdkGkfWMBNu7blgEuUN/view?usp=sharing) |
+| Task 2 | Llama 3 Instruct | [download](https://drive.google.com/file/d/15g-ufsMV80zz8zHgvyk4FVuHI9USbl2s/view?usp=sharing) |
+| Task 3 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1sWjyLsosVx_dNN1pYS56XVlwuW3TR8xJ/view?usp=sharing) |
 
 
 ## Reward model checkpoint
-- OPT model: [download](https://drive.google.com/file/d/1W7HsPs4F2Js1l8zO-iCNRiXLcML4AswP/view?usp=sharing)
+- OPT model: [download](https://drive.google.com/file/d/1mlS4jluyJQQOgf2h7PIiCq_lsb7H5lDc/view?usp=sharing)
 
 ## Training code
 
