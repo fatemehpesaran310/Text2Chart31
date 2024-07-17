@@ -21,8 +21,10 @@ Unzip it under `checkpoint` folder and run inference code.
 | Task  | Model | Checkpoints |
 | :------ | :------ | :------: |
 | Task 1 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1erAnQZM0mx2nJCdkGkfWMBNu7blgEuUN/view?usp=sharing) |
+| Task 1 | Code Llama 13B   | [download](TBD)
 | Task 2 | Llama 3 Instruct | [download](https://drive.google.com/file/d/15g-ufsMV80zz8zHgvyk4FVuHI9USbl2s/view?usp=sharing) |
 | Task 3 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1sWjyLsosVx_dNN1pYS56XVlwuW3TR8xJ/view?usp=sharing) |
+
 
 
 ## Reward model checkpoint
