@@ -20,8 +20,8 @@ Unzip it under `checkpoint` folder and run inference code.
 
 | Task  | Model | Checkpoints |
 | :------ | :------ | :------: |
-| Task 1 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1erAnQZM0mx2nJCdkGkfWMBNu7blgEuUN/view?usp=sharing) |
-| Task 1 | Code Llama 13B   | [download](TBD)
+| Task 1 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1bpNqSxy03FcGsAwOxk29QbqgUJGh20cK/view?usp=drive_link) |
+| Task 1 | Code Llama 13B   | [download](https://drive.google.com/file/d/1smThJejaxn5uyepZ0cmtmaDXXxxZPR9I/view?usp=drive_link) |
 | Task 2 | Llama 3 Instruct | [download](https://drive.google.com/file/d/15g-ufsMV80zz8zHgvyk4FVuHI9USbl2s/view?usp=sharing) |
 | Task 3 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1sWjyLsosVx_dNN1pYS56XVlwuW3TR8xJ/view?usp=sharing) |
 
@@ -33,7 +33,8 @@ Unzip it under `checkpoint` folder and run inference code.
 ## Training code
 
 ### Supervised fine-tuning
-- Task 1: Run `python sft-task1.py`
+- Task 1 (Llama 3 Instruct): Run `python sft-task1.py`
+- Task 1 (Code llama 13B): Run `sft-task1-cli.py`
 - Task 2: Run `python sft-task2.py`
 - Task 3: Run `python sft-task3.py`
 
