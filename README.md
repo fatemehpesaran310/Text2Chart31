@@ -34,7 +34,7 @@ Unzip it under `checkpoint` folder and run inference code.
 
 ### Supervised fine-tuning
 - Task 1 (Llama 3 Instruct): Run `python sft-task1.py`
-- Task 1 (Code llama 13B): Run `sft-task1-cli.py`
+- Task 1 (Code llama 13B): Run `python sft-task1-cli.py`
 - Task 2: Run `python sft-task2.py`
 - Task 3: Run `python sft-task3.py`
 
