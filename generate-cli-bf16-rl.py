@@ -25,11 +25,15 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 tokenizer.add_special_tokens({"pad_token": "<PAD>"})
 model.resize_token_embeddings(len(tokenizer))
 
-peft_model_id = "cli-meta-13b-sft-task1-lora16-epoch5"
-peft_model: LoraModel = PeftModel.from_pretrained(
-    model,
-    f"./checkpoint/{peft_model_id}/final/",
-    offload_folder="lora_results/lora_7/temp",
+sft_model_id = "./checkpoint/cli-meta-13b-sft-task1-lora16-epoch5/final"
+sft_model: LoraModel = PeftModel.from_pretrained(
+    model, f"{sft_model_id}", offload_folder="lora_results/lora_7/temp"
+)
+sft_model = sft_model.merge_and_unload()
+
+rl_model_id = "policy1-joint-pref-v3-2k-random-data-step94"
+rl_model = PeftModel.from_pretrained(
+    sft_model, f"./checkpoint/{rl_model_id}/", offload_folder="lora_results/lora_7/temp"
 )
 
 with open("./prepare-data/Text2Chart-31-test.json", "r") as file:
@@ -67,7 +71,7 @@ import pandas as pd
 import numpy as np
 """
     input_tokens = tokenizer(input_prompt, return_tensors="pt")["input_ids"].to("cuda")
-    generated_output = peft_model.generate(
+    generated_output = rl_model.generate(
         input_ids=input_tokens,
         do_sample=True,
         top_k=10,
@@ -90,4 +94,4 @@ import numpy as np
             "code": item["code"],
         }
     )
-    save_to_json(dataset, f"output/{peft_model_id}.json")
+    save_to_json(dataset, f"output/{rl_model_id}.json")

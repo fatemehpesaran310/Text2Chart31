@@ -7,11 +7,17 @@ Official PyTorch implementation of **"Text2Chart31: Instruction Tuning for Chart
 
 ## Dataset File
 - Code, Description, Data Table and Reasoning Step: 
-    - Training set: `./prepare-data/Text2Chart-31-train.json`
+    - Training set (Text2Chart31): `./prepare-data/Text2Chart-31-train.json`
     - Test set: `./prepare-data/Text2Chart-31-test.json`.
 - Dataset file including the figures: 
-    - Training set: [download](https://drive.google.com/file/d/1RpczOjGgwEhS1ufsnf8F7BNeDxTyhHzO/view?usp=sharing)
+    - Training set (Text2Chart31) : [download](https://drive.google.com/file/d/1RpczOjGgwEhS1ufsnf8F7BNeDxTyhHzO/view?usp=sharing)
     - Test set: [download](https://drive.google.com/file/d/1tZZc-xg44Lo8IcHHxIv9yIhE3WmtX0qZ/view?usp=sharing)
+
+- Text2Chart31-v2:
+   - As pointed out in tabel 1 `Text2Chart31-v2
+is constructed and published at the camera ready version of the paper, and the experiment results in this paper
+is conducted with Text2Chart31`. We will upload the experimental results of Text2Chart31-v2 on this github page soon. However you can download Text2Chart31-v2 here [download](). 
+
 
 
 ## LoRA checkpoints
@@ -25,11 +31,21 @@ Unzip it under `checkpoint` folder and run inference code.
 | Task 2 | Llama 3 Instruct | [download](https://drive.google.com/file/d/15g-ufsMV80zz8zHgvyk4FVuHI9USbl2s/view?usp=sharing) |
 | Task 3 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1sWjyLsosVx_dNN1pYS56XVlwuW3TR8xJ/view?usp=sharing) |
 
+### RL-tuned model
+
+| Task  | Model | Checkpoints |
+| :------ | :------ | :------: |
+| Task 1 | Llama 3 Instruct | [download]() |
+| Task 3 | Llama 3 Instruct | [download]() |
+| Task 1 | Code Llama 13B   | [download](https://drive.google.com/file/d/1DS_mMNOJA3bWYi-0XsgwbrKvEc8ffNQl/view?usp=sharing) |
+
+Llama 3 Instruct models for Task 1 and Task 3 are jointly optimized with our algorithm here.
 
 
 ## Reward model checkpoint
-- OPT model: [download](https://drive.google.com/file/d/1mlS4jluyJQQOgf2h7PIiCq_lsb7H5lDc/view?usp=sharing)
+- OPT model (Llama 3 Instruct): [download](https://drive.google.com/file/d/1mlS4jluyJQQOgf2h7PIiCq_lsb7H5lDc/view?usp=sharing)
 
+- OPT model (Code Llama 13B): [download](https://drive.google.com/file/d/1CG7kBd8o58MQjQb8oDVS2ZiAPQcSxomB/view?usp=sharing)
 ## Training code
 
 ### Supervised fine-tuning
@@ -39,15 +55,21 @@ Unzip it under `checkpoint` folder and run inference code.
 - Task 3: Run `python sft-task3.py`
 
 ### RL fine-tuning
-- Task 1 & Task 3: Run `python rl-task1-task3.py` (You would need to download reward model/SFT model checkpoints beforehand).
+- Task 1 & Task 3 (Llama 3 Instruct): Run `python rl-task1-task3.py` (You would need to download reward model/SFT model checkpoints beforehand).
+- Task 1 (Code Llama 13B) : Run `python rl-task1-cli.py`
 
 ## Generating samples
 
 ### Task 1
-- Base model : Run `python generate-llama3-base.py`
-- SFT model : Run `python generate-llama3-bf16-sft.py`
-- RL model : Run `python generate-llama3-bf16-rl.py`
+- Llama 3 Instruct:
+    - Base model : Run `python generate-llama3-base.py`
+    - SFT model : Run `python generate-llama3-bf16-sft.py`
+    - RL model : Run `python generate-llama3-bf16-rl.py`
 
+- Code Llama 13B:
+   - Base model: Run `python generate-cli-base.py`
+   - SFT model: Run `python generate-cli-sft.py`
+   - RL model: Run `python generate-cli-bf16-rl.py` 
 ### Task 2
 - SFT model : Run `python generate2-llama3-sft.py` (You would need to train the model beforehand).
 

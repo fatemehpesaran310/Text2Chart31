@@ -2,11 +2,10 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 import json
 import time
-from peft import PeftModel, LoraModel
 import os
 
 
-def save_to_json(data, filename):
+def save_to_json(data, filename="output/task1-cli.json"):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
@@ -21,16 +20,6 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-tokenizer.add_special_tokens({"pad_token": "<PAD>"})
-model.resize_token_embeddings(len(tokenizer))
-
-peft_model_id = "cli-meta-13b-sft-task1-lora16-epoch5"
-peft_model: LoraModel = PeftModel.from_pretrained(
-    model,
-    f"./checkpoint/{peft_model_id}/final/",
-    offload_folder="lora_results/lora_7/temp",
-)
 
 with open("./prepare-data/Text2Chart-31-test.json", "r") as file:
     test_set = json.load(file)
@@ -67,7 +56,7 @@ import pandas as pd
 import numpy as np
 """
     input_tokens = tokenizer(input_prompt, return_tensors="pt")["input_ids"].to("cuda")
-    generated_output = peft_model.generate(
+    generated_output = model.generate(
         input_ids=input_tokens,
         do_sample=True,
         top_k=10,
@@ -90,4 +79,4 @@ import numpy as np
             "code": item["code"],
         }
     )
-    save_to_json(dataset, f"output/{peft_model_id}.json")
+    save_to_json(dataset, "task1-cli-meta-13b")
