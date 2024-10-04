@@ -16,7 +16,7 @@ Official PyTorch implementation of **"Text2Chart31: Instruction Tuning for Chart
 - Text2Chart31-v2:
    - As pointed out in tabel 1 `Text2Chart31-v2
 is constructed and published at the camera ready version of the paper, and the experiment results in this paper
-is conducted with Text2Chart31`. We will upload the experimental results of Text2Chart31-v2 on this github page soon. However you can download Text2Chart31-v2 here [download](). 
+is conducted with Text2Chart31`. We will upload the experimental results of Text2Chart31-v2 on this github page soon. However you can download Text2Chart31-v2 here. (To be announced soon.) 
 
 
 
