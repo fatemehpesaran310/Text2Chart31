@@ -26,8 +26,8 @@ Unzip it under `checkpoint` folder and run inference code.
 
 | Task  | Model | Checkpoints |
 | :------ | :------ | :------: |
-| Task 1 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1bpNqSxy03FcGsAwOxk29QbqgUJGh20cK/view?usp=drive_link) |
-| Task 1 | Code Llama 13B   | [download](https://drive.google.com/file/d/1smThJejaxn5uyepZ0cmtmaDXXxxZPR9I/view?usp=drive_link) |
+| Task 1 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1bpNqSxy03FcGsAwOxk29QbqgUJGh20cK/view?usp=sharing) |
+| Task 1 | Code Llama 13B   | [download](https://drive.google.com/file/d/1smThJejaxn5uyepZ0cmtmaDXXxxZPR9I/view?usp=sharing) |
 | Task 2 | Llama 3 Instruct | [download](https://drive.google.com/file/d/15g-ufsMV80zz8zHgvyk4FVuHI9USbl2s/view?usp=sharing) |
 | Task 3 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1sWjyLsosVx_dNN1pYS56XVlwuW3TR8xJ/view?usp=sharing) |
 
@@ -35,8 +35,8 @@ Unzip it under `checkpoint` folder and run inference code.
 
 | Task  | Model | Checkpoints |
 | :------ | :------ | :------: |
-| Task 1 | Llama 3 Instruct | [download]() |
-| Task 3 | Llama 3 Instruct | [download]() |
+| Task 1 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1pIuXw2QRYA0rbo4QiPc1dIq3Vz2h5UkL/view?usp=sharing) |
+| Task 3 | Llama 3 Instruct | [download](https://drive.google.com/file/d/1mhsaavSJ_Kfe5qt5XWLsqdyvNvjcXdT1/view?usp=sharing) |
 | Task 1 | Code Llama 13B   | [download](https://drive.google.com/file/d/1DS_mMNOJA3bWYi-0XsgwbrKvEc8ffNQl/view?usp=sharing) |
 
 Llama 3 Instruct models for Task 1 and Task 3 are jointly optimized with our algorithm here.
@@ -55,7 +55,8 @@ Llama 3 Instruct models for Task 1 and Task 3 are jointly optimized with our alg
 - Task 3: Run `python sft-task3.py`
 
 ### RL fine-tuning
-- Task 1 & Task 3 (Llama 3 Instruct): Run `python rl-task1-task3.py` (You would need to download reward model/SFT model checkpoints beforehand).
+You would need to download reward model/SFT model checkpoints beforehand.
+- Task 1 & Task 3 (Llama 3 Instruct): Run `python rl-task1-task3.py` 
 - Task 1 (Code Llama 13B) : Run `python rl-task1-cli.py`
 
 ## Generating samples
@@ -83,4 +84,12 @@ We will release the evaluation code soon!
 
 # Citation
 If you find this code useful, please don't forget to cite the paper! 🙂
+```
+@inproceedings{pesaranzadeh2024text2chart31,
+    title = “Text2Chart31: Instruction Tuning for Chart Generation with Automatic Feedback”,
+    author = "Pesaran zadeh, Fatemeh  and Kim, Juyeon  and Kim, Jin-Hwa and Kim, Gunhee",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+    year = "2024”,
+}
+```
 
