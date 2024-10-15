@@ -1,5 +1,5 @@
 # Text2Chart31
-Official PyTorch implementation of **"Text2Chart31: Instruction Tuning for Chart Generation with Automatic Feedback"**
+Official PyTorch implementation of **"Text2Chart31: Instruction Tuning for Chart Generation with Automatic Feedback", (EMNLP 2024 Main Oral Presentation)** 
 
 - **Paper: [Link](https://arxiv.org/abs/2410.04064v1)**
 - **Project Page: [Link](https://fatemehpesaran310.github.io/projects/text2chart31.html)**
